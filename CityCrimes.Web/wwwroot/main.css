@@ -1,0 +1,17 @@
+#menu{
+    height: 54px;
+}
+
+#map {
+    margin: 0;
+    padding: 0;
+}
+
+#floating-panel {
+    position: absolute;
+    top: 15%;
+    left: 0.5%;
+    width: 400px;
+    height: 40px;
+    z-index: 5;
+  }
