@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MapPoc.Common\CityCrimes.Common.csproj" />
+    <ProjectReference Include="..\CityCrimes.Common\CityCrimes.Common.csproj" />
   </ItemGroup>
 
 </Project>
