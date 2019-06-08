@@ -17,13 +17,13 @@ namespace CityCrimes.DAL
             _connectionString = cs ?? "mongodb://localhost:27017";
         }
 
-        public IEnumerable<Crime> GetCrimes(SearchCrimeRequest request)
+        public IEnumerable<Crime> GetCrimes(SearchCrimesRequest request)
         {
             try
             {
                 var client = new MongoClient(_connectionString);
 
-                var db = client.GetDatabase("test");
+                var db = client.GetDatabase(request.Db);
 
                 if (request == null || String.IsNullOrWhiteSpace(request.SearchCollection))
                     return new List<Crime>();

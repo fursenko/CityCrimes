@@ -13,10 +13,16 @@ namespace CityCrimes.DAL
             {
                 //Debug.WriteLine("START");
                 //var client = new MongoClient("mongodb://localhost:27017");
+                //var mongoClientSettings = new MongoClientSettings();
+                //mongoClientSettings.Credential = new MongoCredential().;
+
+                //client.
 
                 //Debug.WriteLine("MongoClient is initialized");
 
+                //var doc = new TDocument
                 //var db = client.GetDatabase("test");
+                //var testCl = db.GetCollection("").InsertOne()
 
                 //var collection = db.GetCollection<Crime>("crimes");
 

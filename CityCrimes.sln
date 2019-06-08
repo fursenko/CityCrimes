@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityCrimes.Web", "CityCrimes.Web\CityCrimes.Web.csproj", "{0FF320EA-5F4B-40A0-A61A-9AF386D57E12}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityCrimes.DAL.Test", "CityCrimes.DAL.Test\CityCrimes.DAL.Test.csproj", "{1982237B-846B-4A2C-8A60-0EFA46A27F97}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityCrimes.Common", "CityCrimes.Common\CityCrimes.Common.csproj", "{6F45ACE0-F069-4DF4-A42A-51648370A4C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityCrimes.Import", "CityCrimes.Import\CityCrimes.Import.csproj", "{3EF23748-BEBD-4956-B280-21205384B04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityCrimes.DataImporter", "CityCrimes.DataImporter\CityCrimes.DataImporter.csproj", "{0AF22278-EB4C-4F12-A182-2BB676152109}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{6F45ACE0-F069-4DF4-A42A-51648370A4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F45ACE0-F069-4DF4-A42A-51648370A4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F45ACE0-F069-4DF4-A42A-51648370A4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF23748-BEBD-4956-B280-21205384B04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF23748-BEBD-4956-B280-21205384B04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF23748-BEBD-4956-B280-21205384B04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF23748-BEBD-4956-B280-21205384B04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF22278-EB4C-4F12-A182-2BB676152109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF22278-EB4C-4F12-A182-2BB676152109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF22278-EB4C-4F12-A182-2BB676152109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF22278-EB4C-4F12-A182-2BB676152109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

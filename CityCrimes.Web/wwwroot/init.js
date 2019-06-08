@@ -7,7 +7,7 @@ window.onload = function () {
     hideAllContent();
     showContent('#aboutContent');
     initialize();
-}
+};
 
 function initialize() {
     $('#aboutLink').click(function (e) {
@@ -36,15 +36,13 @@ function hideAllContent() {
  }
 
 function showContent(id) {
-    hideAllContent()
+    hideAllContent();
     $(id).show();
     var selector = id + '';
     $(selector.replace('Content', '') + 'Link').addClass('active');
 }
 
 function initMap() {
-   console.log('init map');
-    
    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
         center: {lat: 41.880302, lng: -87.696388},
@@ -69,11 +67,11 @@ function initMap() {
         data: { type: $('#crimeType').children('option:selected').val(), year: $('#year').children('option:selected').val() },
         type: "GET",
         success: function (response) {
-          result.forEach(element => {
-            element.setMap(null);
-          });
-          result = [];
+          clearMap();
+
             for (let i = 0; i < response.length; i++) {
+
+              setTimeout(function () {
                 const element = response[i];
                     // Add the circle for this city to the map.
                     var cityCircle = new google.maps.Circle({
@@ -83,11 +81,15 @@ function initMap() {
                       fillColor: '#F1AAA5',
                       fillOpacity: 0.4,
                       map: map,
-                      center: {lat: parseFloat(response[i].latitude), lng: parseFloat(response[i].longitude)},
+                      center: { lat: parseFloat(response[i].latitude), lng: parseFloat(response[i].longitude) },
                       radius: 20
                     });
 
                     result.push(cityCircle);
+
+                    $('#status').width(parseInt(((100 / (response.length)) * (i + 1)) + 1) + '%');
+              }, 15);
+              
             }
         },
         error: function (error) {
@@ -95,4 +97,16 @@ function initMap() {
         }
     });
     });
+
+    $('#clear').on('click', function () {
+      clearMap();
+    });
   }
+
+  function clearMap() {
+    result.forEach(function (element) {
+      element.setMap(null);
+    });
+    result = [];
+    $('#status').width('0%');
+  };
